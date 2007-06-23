@@ -10,7 +10,8 @@ License:	Paul Sheer, <psheer@icon.co.za>. Published under Open Content license.
 Group:		Books/Computer books
 BuildRoot:	%_tmppath/%name-%version-root
 BuildArch:	noarch
-URL:		http://home.shisas.co.za/rute/
+Requires:	xdg-utils
+URL:		http://rute.2038bug.com
 Obsoletes:	rute_pdf
 
 %description
@@ -20,18 +21,22 @@ it from beginning to end in consecutive order. Rute also satisfies the
 requirements for course notes for a Linux training course.
 
 %prep
+%setup -q -n %{name}
 
 %build
 rm -fr $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{_docdir}/%{name}-%{version}
 
 %install
-cd $RPM_BUILD_ROOT/%{_docdir}/%{name}-%{version}
-cp %{SOURCE0} .
-
-mkdir -p $RPM_BUILD_ROOT/%{_menudir}
-install -m644 %{SOURCE1} $RPM_BUILD_ROOT/%{_menudir}/%{name}
-perl -pi -e 's,DOCDIR,%{_docdir}/%{name}-%{version}/,' $RPM_BUILD_ROOT/%{_menudir}/*
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
+[Desktop Entry]
+Name=Beginners Guide to Linux
+Comment=Rute Users Tutorial and Exposition
+Exec=xdg-open %{_docdir}/%{name}/index.html
+Icon=documentation_section
+Type=Application
+Categories=Documentation;System;
+EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,7 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,0755)
-%{_docdir}/%{name}-%{version}
-%{_menudir}/*
-
-
+%doc *
+%{_datadir}/applications/*.desktop
