@@ -1,9 +1,9 @@
 Summary:	Rute Users Tutorial and Exposition
 Name:		rute
-Version:	0.9.1
-Release:	%mkrel 4
+Version:	1.0.0
+Release:	%mkrel 1
 
-Source0:	rute.pdf
+Source0:	%{name}.html.tar.bz2
 Source1:	rute.menu
 
 License:	Paul Sheer, <psheer@icon.co.za>. Published under Open Content license.
@@ -11,7 +11,6 @@ Group:		Books/Computer books
 BuildRoot:	%_tmppath/%name-%version-root
 BuildArch:	noarch
 URL:		http://home.shisas.co.za/rute/
-Requires:	gv, locales-en, mandrake_desk
 Obsoletes:	rute_pdf
 
 %description
