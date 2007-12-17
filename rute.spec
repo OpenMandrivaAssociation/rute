@@ -8,7 +8,6 @@ Source1:	rute.menu
 
 License:	Paul Sheer, <psheer@icon.co.za>. Published under Open Content license.
 Group:		Books/Computer books
-BuildRoot:	%_tmppath/%name-%version-root
 BuildArch:	noarch
 Requires:	xdg-utils
 URL:		http://rute.2038bug.com
