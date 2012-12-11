@@ -1,0 +1,1 @@
+?package(rute): needs="x11" section="Documentation" title="Beginners Guide to Linux" longtitle="Rute Users Tutorial and Exposition" icon="documentation_section.png" command="gv DOCDIRrute.pdf" 

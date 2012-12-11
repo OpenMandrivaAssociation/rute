@@ -55,3 +55,33 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,0755)
 %doc *
 %{_datadir}/applications/*.desktop
+
+
+%changelog
+* Tue Sep 08 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.0.0-4mdv2010.0
++ Revision: 433599
+- rebuild
+
+* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.0.0-3mdv2009.0
++ Revision: 242634
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sat Jun 23 2007 Funda Wang <fundawang@mandriva.org> 1.0.0-1mdv2008.0
++ Revision: 43373
+- Use xdg menu
+  use xdg-open
+- New version
+
+
+* Thu Feb 08 2007 Lenny Cartier <lenny@mandriva.com> 0.9.1-4mdv2007.0
++ Revision: 117694
+- Rebuild
+- Import rute
+
