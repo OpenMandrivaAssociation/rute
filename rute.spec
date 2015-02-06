@@ -1,7 +1,7 @@
 Summary:	Rute Users Tutorial and Exposition
 Name:		rute
 Version:	1.0.0
-Release:	%mkrel 4
+Release:	5
 
 Source0:	%{name}.html.tar.bz2
 Source1:	rute.menu
