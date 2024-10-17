@@ -11,7 +11,7 @@ Group:		Books/Computer books
 BuildRoot:	%_tmppath/%name-%version-root
 BuildArch:	noarch
 Requires:	xdg-utils
-URL:		http://rute.2038bug.com
+URL:		https://rute.2038bug.com
 Obsoletes:	rute_pdf
 
 %description
